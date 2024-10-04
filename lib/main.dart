@@ -1,9 +1,11 @@
-import 'package:delish_go/pages/food/popular_food_detail.dart';
 import 'package:delish_go/pages/food/recommended_food_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'helper/dependencies.dart' as dep;
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await dep.init();
   runApp(const MyApp());
 }
 
