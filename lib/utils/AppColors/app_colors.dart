@@ -7,7 +7,7 @@ class AppColors{
   static final iconColor1 = const Color(0xFFffd28d);
   static final iconColor2 = const Color(0xFFfcab88);
   static final paraColor = const Color(0xFF8f837f);
-  static final buttonBackgroundColor = const Color(0xFFf7ff6f4);
+  static final buttonBackgroundColor = Color.fromARGB(255, 240, 222, 228);
   static final signColor = const Color(0xFFa9a29f);
 }
 
