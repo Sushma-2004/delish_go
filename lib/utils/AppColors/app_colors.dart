@@ -9,5 +9,6 @@ class AppColors{
   static final paraColor = const Color(0xFF8f837f);
   static final buttonBackgroundColor = Color.fromARGB(255, 240, 222, 228);
   static final signColor = const Color(0xFFa9a29f);
+  
 }
 
