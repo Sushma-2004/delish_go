@@ -1,4 +1,3 @@
-import 'package:delish_go/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 
 class AppIcon extends StatelessWidget {
