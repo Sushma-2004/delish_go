@@ -1,4 +1,4 @@
-import 'package:delish_go/utils/dimensions.dart';
+import 'package:delish_go/ui/utils/dimensions.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable

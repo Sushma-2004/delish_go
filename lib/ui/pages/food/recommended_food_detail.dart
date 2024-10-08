@@ -1,8 +1,8 @@
-import 'package:delish_go/utils/AppColors/app_colors.dart';
-import 'package:delish_go/utils/dimensions.dart';
-import 'package:delish_go/widgets/app_icon.dart';
-import 'package:delish_go/widgets/big_text.dart';
-import 'package:delish_go/widgets/expandable_text_widget.dart';
+import 'package:delish_go/ui/utils/AppColors/app_colors.dart';
+import 'package:delish_go/ui/utils/dimensions.dart';
+import 'package:delish_go/ui/reusable_widgets/app_icon.dart';
+import 'package:delish_go/ui/reusable_widgets/big_text.dart';
+import 'package:delish_go/ui/reusable_widgets/expandable_text_widget.dart';
 import 'package:flutter/material.dart';
 
 class RecommendedFoodDetail extends StatelessWidget {

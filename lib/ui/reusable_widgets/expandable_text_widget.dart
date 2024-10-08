@@ -1,6 +1,6 @@
-import 'package:delish_go/utils/AppColors/app_colors.dart';
-import 'package:delish_go/utils/dimensions.dart';
-import 'package:delish_go/widgets/small_text.dart';
+import 'package:delish_go/ui/utils/AppColors/app_colors.dart';
+import 'package:delish_go/ui/utils/dimensions.dart';
+import 'package:delish_go/ui/reusable_widgets/small_text.dart';
 import 'package:flutter/material.dart';
 
 class ExpandableTextWidget extends StatefulWidget {
