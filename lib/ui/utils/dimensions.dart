@@ -6,7 +6,7 @@ class Dimensions{
   static double screenWidth = Get.context!.width;
   
   static double pageView = screenHeight/2.64;
-  static double pageViewContainer = screenHeight/3.84;
+  static double pageViewContainer = screenHeight/3.86;
   static double pageViewTextContainer = screenHeight/7.03;
 
   //844/10 844-developers screen height
@@ -47,5 +47,7 @@ class Dimensions{
 
   //bootom height
   static double bottomHeightBar = screenHeight/7.03;
+
+  static double navHeight = screenHeight/14;
 
 }

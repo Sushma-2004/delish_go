@@ -1,9 +1,17 @@
-import 'package:delish_go/ui/pages/food/recommended_food_detail.dart';
+import 'package:delish_go/logic/locator.dart';
+import 'package:delish_go/ui/screen_selector.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  Locator.setup();
+  await Locator.startupService.init();
   runApp(const MyApp());
 }
 
@@ -15,13 +23,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Delish Go',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: RecommendedFoodDetail(),
+      home: ScreenSelector(),
     );
   }
 }
-

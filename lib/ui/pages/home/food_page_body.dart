@@ -32,8 +32,8 @@ class _FoodPageBodyState extends State<FoodPageBody> {
 
   @override
   void dispose() {
-    super.dispose();
     pageController.dispose();
+    super.dispose();
   }
 
   @override
@@ -233,9 +233,9 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 ]),
             child: Container(
               padding: EdgeInsets.only(
-                  top: Dimensions.height15,
+                  top: Dimensions.height10,
                   left: Dimensions.width15,
-                  right: Dimensions.width15),
+                  right: Dimensions.width15,),
               child: AppColumn(text: "Chinese Side",)
             ),
           ),

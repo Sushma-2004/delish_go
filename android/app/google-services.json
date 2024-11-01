@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "183461530338",
+    "project_id": "delish-go",
+    "storage_bucket": "delish-go.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183461530338:android:0fcb2ae325dce576822cbb",
+        "android_client_info": {
+          "package_name": "com.delish_go.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8u-1NAtQGfa9LHecHi731vWv7Zlyxsyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
