@@ -1,4 +1,4 @@
-import 'package:delish_go/data/data_models/products_model.dart';
+import 'package:delish_go/data/data_models/product_model.dart';
 import 'package:delish_go/logic/locator.dart';
 
 class ProductDatabaseService {
@@ -13,8 +13,9 @@ class ProductDatabaseService {
       if (distributorSnapshot.docs.isNotEmpty) {
         for (var doc in distributorSnapshot.docs) {
           Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
-          ProductModel product = ProductModel.fromJson(data);
+          ProductModel product = ProductModel.fromJson(data,doc.id);
           productList.add(product);
+          await createLocal(productList);
         }
       } else {
         print('No distributor found with company ID');
@@ -26,5 +27,15 @@ class ProductDatabaseService {
 
   Future<List<ProductModel>> readAllRemote() async {
     return [];
+  }
+
+  Future<List<ProductModel>> readAllLocal() async {
+    return [];
+  }
+
+  Future<void> createLocal(List<ProductModel> productModels) async {
+    for (var productModel in productModels) {
+      Locator.hiveService.productBox!.put(productModel.documentId, productModel);
+    }
   }
 }
