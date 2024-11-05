@@ -1,4 +1,3 @@
-import 'package:delish_go/logic/data_management_service/product_management_service.dart';
 import 'package:delish_go/ui/utils/AppColors/app_colors.dart';
 import 'package:delish_go/ui/utils/dimensions.dart';
 import 'package:delish_go/ui/reusable_widgets/app_column.dart';
@@ -8,7 +7,6 @@ import 'package:delish_go/ui/reusable_widgets/small_text.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:watch_it/watch_it.dart';
 
 class FoodPageBody extends StatefulWidget {
   const FoodPageBody({super.key});
@@ -44,8 +42,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
     return Column(
       children: [
         // slider section
-        GetBuilder(builder: (controller){
-        return Container(
+        Container(
             //color: Colors.redAccent,
             height: Dimensions.pageView,
             child: PageView.builder(
@@ -53,7 +50,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 itemCount:5,
                 itemBuilder: (context, position) {
                   return _buildPageItem(position);
-                }));}),
+                })),
         // dots
         DotsIndicator(
           dotsCount: 5,
