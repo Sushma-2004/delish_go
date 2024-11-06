@@ -1,3 +1,4 @@
+import 'package:delish_go/logic/locator.dart';
 import 'package:delish_go/ui/pages/home/food_page_body.dart';
 import 'package:delish_go/ui/utils/AppColors/app_colors.dart';
 import 'package:delish_go/ui/utils/dimensions.dart';
@@ -42,27 +43,43 @@ class _MainFoodPageState extends State<MainFoodPage> {
                     )
                   ],
                 ),
-                Center(
-                  child: Container(
-                    width: Dimensions.width45,
-                    height: Dimensions.height45,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(Dimensions.radius15),
-                      color: AppColors.mainColor,
+                Row(
+                  children: [
+                    Container(
+                      width: Dimensions.width45,
+                      height: Dimensions.height45,
+                      decoration: BoxDecoration(
+                        borderRadius:
+                            BorderRadius.circular(Dimensions.radius15),
+                        color: AppColors.mainColor,
+                      ),
+                      child: Icon(Icons.search,
+                          color: Colors.white, size: Dimensions.icon24),
                     ),
-                    child: Icon(Icons.search,
-                        color: Colors.white, size: Dimensions.icon24),
-                  ),
+                    SizedBox(
+                        width: Dimensions
+                            .width15), // Add space between search and logout buttons
+                    GestureDetector(
+                      onTap: Locator.userManagementService.signOut,
+                      child: Container(
+                        width: Dimensions.width45,
+                        height: Dimensions.height45,
+                        decoration: BoxDecoration(
+                          borderRadius:
+                              BorderRadius.circular(Dimensions.radius15),
+                          color: AppColors.mainColor,
+                        ),
+                        child: Icon(Icons.logout,
+                            color: Colors.white, size: Dimensions.icon24),
+                      ),
+                    )
+                  ],
                 )
               ],
             )),
           ),
           //shows the body
-          Expanded(
-            child: SingleChildScrollView(
-              child: FoodPageBody()
-            )
-          ),
+          Expanded(child: SingleChildScrollView(child: FoodPageBody())),
         ],
       ),
     );

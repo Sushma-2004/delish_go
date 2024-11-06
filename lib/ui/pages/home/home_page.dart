@@ -1,7 +1,6 @@
 import 'package:delish_go/ui/pages/cart/cart_page.dart';
 import 'package:delish_go/ui/pages/home/main_food_page.dart';
 import 'package:delish_go/ui/pages/order_history/order_history.dart';
-import 'package:delish_go/ui/pages/profile_page/profile_page.dart';
 import 'package:delish_go/ui/utils/AppColors/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +17,6 @@ List pages = [
   MainFoodPage(),
   OrderHistory(),
   CartPage(),
-  ProfilePage(),
 ];
 
 void onTapNav(int index){
@@ -52,10 +50,7 @@ void onTapNav(int index){
             icon: Icon(Icons.shopping_cart),
             label: "Cart",
           ),
-           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "Account",
-          )
+          
         ],),
     );
   }

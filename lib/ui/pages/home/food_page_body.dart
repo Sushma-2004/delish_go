@@ -118,7 +118,7 @@ class FoodPageBody extends StatelessWidget with WatchItMixin {
                               )
                             : ClipRRect(
                                 borderRadius: BorderRadius.circular(
-                                    14), // Match the Container border radius
+                                    14), 
                                 child: const Image(
                                   image:
                                       AssetImage("asset/images/NO_PRODUCT.png"),
