@@ -69,7 +69,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                               BorderRadius.circular(Dimensions.radius15),
                           color: AppColors.mainColor,
                         ),
-                        child: Icon(Icons.logout,
+                        child: Icon(Icons.logout_outlined,
                             color: Colors.white, size: Dimensions.icon24),
                       ),
                     )
