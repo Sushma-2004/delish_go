@@ -151,10 +151,23 @@ class _PopularFoodDetailState extends State<PopularFoodDetail> {
               child: Container(
                 width: double.maxFinite,
                 height: Dimensions.popularFoodImgSize,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: AssetImage("assets/image/food1.png"))),
+                child:(widget.product.img != "")
+                            ? ClipRRect(
+                                borderRadius: BorderRadius.circular(14),
+                                child: Image.network(
+                                  widget.product.img,
+                                  fit: BoxFit.cover,
+                                ),
+                              )
+                            : ClipRRect(
+                                borderRadius: BorderRadius.circular(
+                                    14), // Match the Container border radius
+                                child: const Image(
+                                  image:
+                                      AssetImage("asset/images/NO_PRODUCT.png"),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),       
               )),
           //icon widget
           Positioned(
