@@ -24,7 +24,6 @@ class UserModel {
 
     
     return UserModel(
-      documentId: docId,
       name: (json['name'] is String) ? json['name'] : '',
       phoneNumber: (json['phoneNumber'] is String) ? json['phoneNumber'] : '',
       email: (json['email'] is String) ? json['email'] : '',

@@ -6,6 +6,7 @@ class StartupService {
     await Locator.hiveService.init();
     await Locator.userManagementService.init();
     await Locator.productManagementService.init();
+    await Locator.saleManagementService.init();
     await setupApplicationData();
   }
 

@@ -58,5 +58,20 @@ class ProductModel {
       'location': location,
     };
   }
+
+   factory ProductModel.fromCartProductJson(
+      {required Map<String, dynamic> json}) {
+    return ProductModel(
+      name: (json['name'] is String) ? json['name'] : '',
+      price: (json['price'] is String) ? json['price'] : '',
+    );
+  }
+
+  Map<String, dynamic> toCartProductJson() {
+    return {
+      'name': name,
+      'price': price,
+    };
+  }
 }
 
