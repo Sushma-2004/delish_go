@@ -3,7 +3,6 @@ import 'package:delish_go/logic/app_management_service/navigation_service.dart';
 import 'package:delish_go/logic/data_management_service/user_management_service.dart';
 import 'package:delish_go/ui/pages/Authentication/signupPage.dart';
 import 'package:delish_go/ui/pages/home/home_page.dart';
-import 'package:delish_go/ui/pages/home/main_food_page.dart';
 import 'package:flutter/material.dart';
 import 'package:watch_it/watch_it.dart';
 
