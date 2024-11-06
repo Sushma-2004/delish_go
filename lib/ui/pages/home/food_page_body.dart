@@ -17,12 +17,10 @@ class FoodPageBody extends StatelessWidget with WatchItMixin {
   // @override
   @override
   Widget build(BuildContext context) {
-
     void navigateToPopularFoodDetail(ProductModel product) {
-    Navigator.of(context).push(
-      MaterialPageRoute(builder: (context) => PopularFoodDetail(product: product))
-    );
-  }
+      Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => PopularFoodDetail(product: product)));
+    }
 
     var productListToDisplay =
         watchValue((ProductManagementService x) => x.productsToDisplay);
@@ -108,7 +106,27 @@ class FoodPageBody extends StatelessWidget with WatchItMixin {
                               BorderRadius.circular(Dimensions.radius20),
                           color: Colors.white38,
                         ),
-                        child: Image(image: AssetImage("assets/image/food1.png"),)
+                        child: (product.img != "")
+                            ? ClipRRect(
+                                borderRadius: BorderRadius.circular(14),
+                                child: Image.network(
+                                  product.img,
+                                  width: 80,
+                                  height: 100,
+                                  fit: BoxFit.contain,
+                                ),
+                              )
+                            : ClipRRect(
+                                borderRadius: BorderRadius.circular(
+                                    14), // Match the Container border radius
+                                child: const Image(
+                                  image:
+                                      AssetImage("asset/images/NO_PRODUCT.png"),
+                                  width: 80,
+                                  height: 100,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
                       ),
                       //text section
                       Expanded(
